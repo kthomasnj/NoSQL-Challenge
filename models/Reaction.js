@@ -36,5 +36,6 @@ userSchema.virtual('friendCount').get(function () {
     return this.friends.length;
 });
 
-const User = model('Reaction', reactionsSchema);
+const Reaction = model('reaction', reactionsSchema);
+
 module.exports = Reaction;
