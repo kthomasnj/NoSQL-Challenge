@@ -1,8 +1,8 @@
-const { Users } = require('../models/User');
+const  User = require('../models/User');
 
 module.exports = {
   getUser(req, res) {
-    Users.find()
+    User.find()
       .then(async (user) => {
         const userObj = {
           user
@@ -15,7 +15,7 @@ module.exports = {
       });
   },
   createUser(req, res) {
-    Users.create(req.body)
+    User.create(req.body)
       .then((user) => res.json(user))
       .catch((err) => res.status(500).json(err));
   }
