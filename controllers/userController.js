@@ -1,9 +1,8 @@
-const { ObjectId } = require('mongoose').Types;
-const { User } = require('../models/User');
+const { Users } = require('../models');
 
 module.exports = {
   getUser(req, res) {
-    User.find()
+    Users.find()
       .then(async (user) => {
         const userObj = {
           user
@@ -14,5 +13,10 @@ module.exports = {
         console.log(err);
         return res.status(500).json(err);
       });
+  },
+  createUser(req, res) {
+    Users.create(req.body)
+      .then((user) => res.json(user))
+      .catch((err) => res.status(500).json(err));
   }
 };
