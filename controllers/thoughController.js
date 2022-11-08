@@ -72,5 +72,17 @@ module.exports = {
                     ? res.status(404).json({ message: 'No thought with that ID' })
                     : res.json({ thought })
             })
+    },
+    createReaction(req, res) {
+        Thought.findOneAndUpdate(
+            { _id: req.params.thoughtId },
+            { $pull: { reactions: req.body } },
+            { new: true }
+        )
+        .then((reaction) => {
+            !reaction
+                ? res.status(404).json({ message: 'No reaction with that ID' })
+                : res.json({ reaction })
+        })
     }
 }
