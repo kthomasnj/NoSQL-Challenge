@@ -32,10 +32,5 @@ const reactionsSchema = new Schema(
     }
 );
 
-userSchema.virtual('friendCount').get(function () {
-    return this.friends.length;
-});
 
-const Reaction = model('reaction', reactionsSchema);
-
-module.exports = Reaction;
+module.exports = reactionsSchema;
