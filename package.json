@@ -1,35 +1,30 @@
 {
-  "name": "JATE",
+  "name": "nosql-challenge",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start:dev": "concurrently \"cd server && npm run server\" \"cd client && npm run dev\"",
-    "start": "npm run build && cd server && node server.js",
-    "server": "cd server nodemon server.js --ignore client",
-    "build": "webpack",
-    "install": "cd client && npm install",
-    "client": "cd client && npm start"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "nodemon index",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kthomasnj/NoSQL-Challenge.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kthomasnj/NoSQL-Challenge/issues"
+  },
+  "homepage": "https://github.com/kthomasnj/NoSQL-Challenge#readme",
   "dependencies": {
-    "express": "^4.17.1",
-    "html-webpack-plugin": "^5.5.0",
-    "if-env": "^1.0.4"
+    "express": "^4.18.2",
+    "mongodb": "^4.5.0",
+    "mongoose": "^6.7.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.15.0",
-    "@babel/plugin-transform-runtime": "^7.15.0",
-    "@babel/preset-env": "^7.15.0",
-    "@babel/runtime": "^7.15.3",
-    "babel-loader": "^8.2.2",
-    "style-loader": "^3.2.1",
-    "css-loader": "^6.2.0",
-    "concurrently": "^5.2.0",
-    "nodemon": "^2.0.4",
-    "webpack": "^5.75.0",
-    "webpack-cli": "^4.9.1"
+    "nodemon": "^2.0.20"
   }
 }
