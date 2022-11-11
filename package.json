@@ -1,30 +1,25 @@
 {
-  "name": "nosql-challenge",
+  "name": "JATE",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "nodemon index",
-    "start": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kthomasnj/NoSQL-Challenge.git"
+    "start:dev": "",
+    "start": "",
+    "server": "",
+    "build": "",
+    "install": "",
+    "client": ""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/kthomasnj/NoSQL-Challenge/issues"
-  },
-  "homepage": "https://github.com/kthomasnj/NoSQL-Challenge#readme",
   "dependencies": {
-    "express": "^4.18.2",
-    "mongodb": "^4.5.0",
-    "mongoose": "^6.7.1"
+    "express": "^4.17.1",
+    "if-env": "^1.0.4"
   },
   "devDependencies": {
-    "nodemon": "^2.0.20"
+    "concurrently": "^5.2.0",
+    "nodemon": "^2.0.4"
   }
 }
